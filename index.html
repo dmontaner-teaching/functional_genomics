@@ -83,9 +83,21 @@
     <h3 class="date"><a href="http://www.dmontaner.com">www.dmontaner.com</a></h3>
 </section>
 
-<section id="genes-and-functions" class="slide level2">
-<h1>Genes and Functions</h1>
+<section id="genes-and-phenotypes" class="slide level2">
+<h1>Genes and Phenotypes</h1>
 <p><img src="images/dna2phenotype.png" alt="" /></p>
+</section>
+<section id="gene-protein-functions" class="slide level2">
+<h1>Gene / Protein Functions</h1>
+<p><img src="images/path1.png" alt="" /></p>
+</section>
+<section class="slide level2">
+
+<p><img src="images/path2.png" alt="" /></p>
+</section>
+<section class="slide level2">
+
+<p><img src="images/path3.png" alt="" /></p>
 </section>
 <section id="experimental-data-microarrays-ngs" class="slide level2">
 <h1>Experimental Data: Microarrays &amp; NGS</h1>
@@ -97,13 +109,40 @@
 </section>
 <section><section id="gsea" class="titleslide slide level1"><h1>GSEA</h1></section><section id="differential-gene-expression" class="slide level2">
 <h1>Differential Gene expression</h1>
+</section></section>
+<section><section id="logistic-regression-model" class="titleslide slide level1"><h1>Logistic Regression model</h1></section><section id="ranking-index" class="slide level2">
+<h1>Ranking index</h1>
+<p>For each gene:</p>
+<p><span class="math display">\[ r = - sign (statistic) \cdot log (pvalue) \]</span></p>
+</section><section id="gsa" class="slide level2">
+<h1>GSA</h1>
+<p><span class="math display">\[ \log \frac{P(g_i \in F)}{P (g_i \notin F)} = \kappa + \alpha \ r_i \]</span></p>
+<ul>
+<li><span class="math inline">\(alpha &gt; 0\)</span> -&gt; association with + index</li>
+<li><span class="math inline">\(alpha &lt; 0\)</span> -&gt; association with - index</li>
+</ul>
+\begin{align*}
+&amp;\alpha &gt; 0 \rightarrow \text{asociation with } + \\
+&amp;\alpha &lt; 0 \rightarrow \text{asociación con índice } - \\
+&amp;\alpha = 0 \rightarrow \text{no asociación}
+\end{align*}
+</section></section>
+<section><section id="multi-dimensional-gene-set-analysis" class="titleslide slide level1"><h1>Multi Dimensional Gene Set Analysis</h1></section><section class="slide level2">
+
+<p><span class="math display">\[ \log \frac{\pi}{1-\pi} = \kappa + \alpha\ x_1 + \beta\ x_2 \]</span></p>
+<p>La interpretación se realiza según el signo de los coeficientes <span class="math inline">\(\alpha\)</span>, <span class="math inline">\(\beta\)</span> y <span class="math inline">\(\gamma\)</span>.</p>
+</section><section id="interaction" class="slide level2">
+<h1>Interaction</h1>
+<p><span class="math display">\[ \log \frac{\pi}{1-\pi} = \kappa + \alpha\ x_1 + \beta\ x_2 + \gamma\ x_1  x_2 \]</span></p>
+</section></section>
+<section><section id="micrornas" class="titleslide slide level1"><h1>microRNAs</h1></section><section id="microrna-to-gene-transference" class="slide level2">
+<h1>microRNA to gene transference</h1>
+<p><span class="math display">\[ t_i = \sum_{j \in G_i} r_{j} \]</span></p>
 </section><section id="equations" class="slide level2">
 <h1>Equations</h1>
-<p><span class="math display">\[ r = - sign (statistic) \cdot log (pvalue) \]</span></p>
-<p>mas</p>
-<p><span class="math display">\[ t_i = \sum_{j \in G_i} r_{j} \]</span></p>
-<p>mas</p>
-<p><span class="math display">\[ \log \frac{P(g_i \in F)}{P (g_i \notin F)} = \kappa + \alpha \ t_i \]</span></p>
+</section><section class="slide level2">
+
+<p><img src="images/diagram.png" alt="" /></p>
 </section><section id="mas-eq" class="slide level2">
 <h1>Mas eq</h1>
 \begin{equation}
@@ -114,7 +153,7 @@ F = \{F_{x} \in  F_{c} &amp;: (|S| &gt; |C|) \\
 \end{split}
 \end{equation}
 </section></section>
-<section><section id="summary" class="titleslide slide level1"><h1>Summary</h1></section><section id="it-was-fun" class="slide level2">
+<section><section id="and-so-summary" class="titleslide slide level1"><h1>And so… Summary</h1></section><section id="it-was-fun" class="slide level2">
 <h1>It was fun</h1>
 <p>… and useful</p>
 <ul>
@@ -146,14 +185,14 @@ F = \{F_{x} \in  F_{c} &amp;: (|S| &gt; |C|) \\
 <li><a href="http://bioconductor.org/packages/SNPediaR" class="uri">http://bioconductor.org/packages/SNPediaR</a></li>
 <li><a href="https://github.com/dmontaner/mirbaseID" class="uri">https://github.com/dmontaner/mirbaseID</a></li>
 <li><a href="https://github.com/genometra/agilent" class="uri">https://github.com/genometra/agilent</a></li>
-<li><p><a href="https://cran.r-project.org/web/packages/TiddlyWikiR" class="uri">https://cran.r-project.org/web/packages/TiddlyWikiR</a> - <a href="http://dmontaner-papers.github.io/gsa4mirna">ex</a></p></li>
-<li><p><a href="http://babelomics.org" class="uri">http://babelomics.org</a></p></li>
+<li><a href="https://cran.r-project.org/web/packages/TiddlyWikiR" class="uri">https://cran.r-project.org/web/packages/TiddlyWikiR</a> - <a href="http://dmontaner-papers.github.io/gsa4mirna">ex</a></li>
 </ul>
+<p><a href="http://babelomics.org" class="uri">http://babelomics.org</a></p>
 </section><section id="knowledge-transfer" class="slide level2">
 <h1>Knowledge Transfer</h1>
 <p><img src="images/logo_genometra.jpg" alt="" /></p>
 <p><a href="http://www.genometra.com">www.genometra.com</a></p>
-<p>First <a href="https://www.cipf.es/web/portada/spinoffs;jsessionid=C2DE665D4DFEE112095BB7B311E1A7A3">CIPF</a> Spin-off Compny</p>
+<p>First <a href="https://www.cipf.es/web/portada/spinoffs;jsessionid=C2DE665D4DFEE112095BB7B311E1A7A3">CIPF</a> Spin-off Company</p>
 </section></section>
 <section><section id="what-can-i-add-to-you" class="titleslide slide level1"><h1>What can I add to you</h1></section><section class="slide level2">
 
@@ -161,7 +200,8 @@ F = \{F_{x} \in  F_{c} &amp;: (|S| &gt; |C|) \\
 <li>Statistics &amp; Machine Learning</li>
 <li>Theory + applyed skills + statistical intuition</li>
 <li>Used to solve <em>whole</em> problems: beyond the analysis side</li>
-<li>Team woking</li>
+<li><p>Team woking</p></li>
+<li><p>Very simmilar context Risk prediction in clinic an fraud …</p></li>
 </ul>
 </section><section class="slide level2">
 
@@ -170,9 +210,6 @@ F = \{F_{x} \in  F_{c} &amp;: (|S| &gt; |C|) \\
 <li>Convincing and explaining</li>
 <li>Sharing</li>
 </ul>
-<!-- ![cosa](images/big.jpg) -->
-<!-- ![](images/small.png) -->
-<!-- ![](images/mapa.svg) -->
 </section></section>
     </div>
   </div>

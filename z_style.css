@@ -1,7 +1,8 @@
 
 
 /* re-size all images */
-.reveal img, .reveal video, .reveal iframe { max-width:90%; max-height:60%; }
+.reveal img, { max-width:90%; max-height:10%; }
+/*.reveal img, .reveal video, .reveal iframe { max-width:90%; max-height:10%; }*/
 /* .reveal img, .reveal video, .reveal iframe { width:90%; height:60%; } */
 
 

@@ -3,10 +3,30 @@
 % [www.dmontaner.com](http://www.dmontaner.com)
 
 
-Genes and Functions
+Genes and Phenotypes
 --------------------------------------------------------------
 
 ![](images/dna2phenotype.png)
+
+
+
+Gene / Protein Functions
+--------------------------------------------------------------
+
+
+![](images/path1.png)
+
+
+--------------------------------------------------------------
+
+![](images/path2.png)
+
+--------------------------------------------------------------
+
+![](images/path3.png)
+
+
+
 
 
 Experimental Data: Microarrays & NGS
@@ -26,22 +46,85 @@ Annotation Data Bases - Gene Ontology
 GSEA
 ==============================================================
 
-
 Differential Gene expression
 --------------------------------------------------------------
+
+
+Logistic Regression model
+==============================================================
+ 
+
+Ranking index
+--------------------------------------------------------------
+
+For each gene:
+
+$$ r = - sign (statistic) \cdot log (pvalue) $$
+
+
+GSA
+--------------------------------------------------------------
+
+
+$$ \log \frac{P(g_i \in F)}{P (g_i \notin F)} = \kappa + \alpha \ r_i $$
+
+* $alpha > 0$ -> association with + index
+* $alpha < 0$ -> association with - index
+
+
+\begin{align*}
+&\alpha > 0 \rightarrow \text{asociation with } + \\
+&\alpha < 0 \rightarrow \text{asociación con índice } - \\
+&\alpha = 0 \rightarrow \text{no asociación}
+\end{align*}
+  
+
+
+Multi Dimensional Gene Set Analysis
+==============================================================
+
+--------------------------------------------------------------
+
+$$ \log \frac{\pi}{1-\pi} = \kappa + \alpha\ x_1 + \beta\ x_2 $$
+    
+La interpretación se realiza según el signo de los coeficientes 
+$\alpha$, $\beta$ y $\gamma$.
+
+
+
+Interaction 
+--------------------------------------------------------------
+
+$$ \log \frac{\pi}{1-\pi} = \kappa + \alpha\ x_1 + \beta\ x_2 + \gamma\ x_1  x_2 $$
+
+
+microRNAs
+==============================================================
+
+
+microRNA to gene transference
+--------------------------------------------------------------
+
+$$ t_i = \sum_{j \in G_i} r_{j} $$
+
+
+
+
+
+
+
+
+
+
+
 
 Equations
 --------------------------------------------------------------
 
-$$ r = - sign (statistic) \cdot log (pvalue) $$
 
-mas
+--------------------------------------------------------------
 
-$$ t_i = \sum_{j \in G_i} r_{j} $$
-
-mas
-
-$$ \log \frac{P(g_i \in F)}{P (g_i \notin F)} = \kappa + \alpha \ t_i $$
+![](images/diagram.png)
 
 
 
@@ -100,8 +183,8 @@ Software
 - https://github.com/dmontaner/mirbaseID
 - https://github.com/genometra/agilent
 - https://cran.r-project.org/web/packages/TiddlyWikiR - [ex](http://dmontaner-papers.github.io/gsa4mirna)
-
-- http://babelomics.org
+ 
+http://babelomics.org
 
 
 Knowledge Transfer
@@ -123,6 +206,8 @@ What can I add to you
 - Theory + applyed skills + statistical intuition
 - Used to solve _whole_ problems: beyond the analysis side
 - Team woking
+
+- Very simmilar context Risk prediction in clinic an fraud ...
 
 ----
 
