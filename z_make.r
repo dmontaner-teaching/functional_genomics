@@ -44,5 +44,6 @@ rmarkdown::render (input = entrada, output_file = fichero,
                                      transition = "convex",
                                      center = TRUE,
                                      self_contained = self_contained,
-                                     css = micss
+                                     css = micss,
+                                     mathjax = "local"
                                  ))
