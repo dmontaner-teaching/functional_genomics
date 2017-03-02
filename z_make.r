@@ -25,8 +25,10 @@ library (revealjs);  packageDescription ("revealjs",  fields = "Version") #"0.8"
    tema <- "league"    # ++
 ## tema <- "white"
 
-self_contained <- FALSE
-salida <- "index"
+salida   <- "index"
+selfcont <- FALSE
+mathjax  <- "local"    ## The "local" option uses a local version of MathJax (which is copied into the output directory)
+#mathjax <- "default"  ## The "default" option uses an https URL from the official MathJax CDN.
 
 ################################################################################
 
@@ -40,10 +42,10 @@ fichero <- paste0 (salida, ".html")
 rmarkdown::render (input = entrada, output_file = fichero,
                    output_format =
                        revealjs::revealjs_presentation (
-                                     theme = tema,
-                                     transition = "convex",
-                                     center = TRUE,
-                                     self_contained = self_contained,
-                                     css = micss,
-                                     mathjax = "local"
+                                     theme          = tema,
+                                     transition     = "convex",
+                                     center         = TRUE,
+                                     self_contained = selfcont,
+                                     css            = micss,
+                                     mathjax        = mathjax
                                  ))
