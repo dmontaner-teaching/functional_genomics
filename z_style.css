@@ -1,9 +1,13 @@
 
-
 /* re-size all images */
-.reveal img, { max-width:90%; max-height:10%; }
-/*.reveal img, .reveal video, .reveal iframe { max-width:90%; max-height:10%; }*/
-/* .reveal img, .reveal video, .reveal iframe { width:90%; height:60%; } */
+/* parece que funciona el width pero no el height */
+/* % Defines the height in percent of the containing block */
+
+.reveal img, .reveal video, .reveal iframe {
+    max-width: 90%;
+    max-height: 10%;
+}
+
 
 
 /* Do not capitalize titles */
