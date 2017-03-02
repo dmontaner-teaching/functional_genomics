@@ -2,20 +2,16 @@
 % David Montaner
 % [www.dmontaner.com](http://www.dmontaner.com)
 
+From Genes to Phenotypes
+==============================================================
 
-Genes and Phenotypes
 --------------------------------------------------------------
 
 ![](images/dna2phenotype.png)
 
-
-
-Gene / Protein Functions
 --------------------------------------------------------------
 
-
 ![](images/path1.png)
-
 
 --------------------------------------------------------------
 
@@ -25,29 +21,92 @@ Gene / Protein Functions
 
 ![](images/path3.png)
 
-
-
-
-
-Experimental Data: Microarrays & NGS
 --------------------------------------------------------------
 
-![](images/expression.png)
-
+![](images/dna2phenotype.png)
 
 Annotation Data Bases - Gene Ontology
 --------------------------------------------------------------
 
 ![](images/dag.gif)
 
+--------------------------------------------------------------
+
+![](images/dna2phenotype.png)
+
+
+Experimental Data: Microarrays & NGS
+--------------------------------------------------------------
+
+![](images/array.png)
+
+thousands or millions of genomc _variables_
+
+--------------------------------------------------------------
+
+![](images/expression.png)
+
+
+Gene Expression Analysis
+==============================================================
+
+Clustering
+--------------------------------------------------------------
+
+![](images/clustering.png)
+
+
+Class prediction
+--------------------------------------------------------------
+
+
+Hypothesis testing
+--------------------------------------------------------------
+
+![](images/difexp.png)
+
+--------------------------------------------------------------
+
+![](images/dag.gif)
+
+
+
+Gene Set Analysys
+==============================================================
+
+--------------------------------------------------------------
+
+![](images/over_representation_methods.png)
+
+
+Shift in the observation unit
+--------------------------------------------------------------
+
+$H_0: gene_i$ is not differentially expressed ... 
+
+$H_0: gene set_i$ is not __enriched__ ... 
+
 
 
 
 GSEA
-==============================================================
-
-Differential Gene expression
 --------------------------------------------------------------
+
+![](images/gsea.jpg)
+
+Confidence level: _permutation_ test 
+
+
+Remarks
+--------------------------------------------------------------
+
+- Shift in the observatio unit
+
+$H_0: gene_i$ is not differentially expressed
+
+$H_0: \text{gene set}_j$ is not __enriched__
+
+hola
 
 
 Logistic Regression model
