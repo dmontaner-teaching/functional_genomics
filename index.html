@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="author" content="David Montaner" />
+  <title>Functional Genomics</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="index_files/reveal.js-3.3.0/css/reveal.css"/>
+
+
+
+<link rel="stylesheet" href="index_files/reveal.js-3.3.0/css/theme/league.css" id="theme">
+
+
+  <!-- some tweaks to reveal css -->
+  <style type="text/css">
+    .reveal h1 { font-size: 2.0em; }
+    .reveal h2 { font-size: 1.5em;  }
+    .reveal h3 { font-size: 1.25em;	}
+    .reveal h4 { font-size: 1em;	}
+
+    .reveal .slides>section,
+    .reveal .slides>section>section {
+      padding: 0px 0px;
+    }
+
+
+
+    .reveal table {
+      border-width: 1px;
+      border-spacing: 2px;
+      border-style: dotted;
+      border-color: gray;
+      border-collapse: collapse;
+      font-size: 0.7em;
+    }
+
+    .reveal table th {
+      border-width: 1px;
+      padding-left: 10px;
+      padding-right: 25px;
+      font-weight: bold;
+      border-style: dotted;
+      border-color: gray;
+    }
+
+    .reveal table td {
+      border-width: 1px;
+      padding-left: 10px;
+      padding-right: 25px;
+      border-style: dotted;
+      border-color: gray;
+    }
+
+  </style>
+
+    <style type="text/css">code{white-space: pre;}</style>
+
+    <link rel="stylesheet" href="z_style.css"/>
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match( /print-pdf/gi ) ? 'index_files/reveal.js-3.3.0/css/print/pdf.css' : 'index_files/reveal.js-3.3.0/css/print/paper.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+    <!--[if lt IE 9]>
+    <script src="index_files/reveal.js-3.3.0/lib/js/html5shiv.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+<section>
+    <h1 class="title">Functional Genomics</h1>
+    <h2 class="author">David Montaner</h2>
+    <h3 class="date"><a href="http://www.dmontaner.com">www.dmontaner.com</a></h3>
+</section>
+
+<section id="genes-and-functions" class="slide level2">
+<h1>Genes and Functions</h1>
+<p><img src="images/dna2phenotype.png" alt="" /></p>
+</section>
+<section id="experimental-data-microarrays-ngs" class="slide level2">
+<h1>Experimental Data: Microarrays &amp; NGS</h1>
+<p><img src="images/expression.png" alt="" /></p>
+</section>
+<section id="annotation-data-bases---gene-ontology" class="slide level2">
+<h1>Annotation Data Bases - Gene Ontology</h1>
+<p><img src="images/dag.gif" alt="" /></p>
+</section>
+<section id="microarrays-ngs" class="slide level2">
+<h1>Microarrays &amp; NGS</h1>
+</section>
+<section><section id="gsea" class="titleslide slide level1"><h1>GSEA</h1></section><section id="differential-gene-expression" class="slide level2">
+<h1>Differential Gene expression</h1>
+</section></section>
+<section><section id="what-can-i-add-to-you" class="titleslide slide level1"><h1>What can I add to you</h1></section><section class="slide level2">
+
+<ul>
+<li>uno</li>
+<li>dos</li>
+</ul>
+<!-- ![cosa](images/big.jpg) -->
+<!-- ![](images/small.png) -->
+<!-- ![](images/mapa.svg) -->
+</section></section>
+    </div>
+  </div>
+
+  <script src="index_files/reveal.js-3.3.0/lib/js/head.min.js"></script>
+  <script src="index_files/reveal.js-3.3.0/js/reveal.js"></script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        // Push each slide change to the browser history
+        history: true,
+        // Vertical centering of slides
+        center: true,
+        // Transition style
+        transition: 'convex', // none/fade/slide/convex/concave/zoom
+        // Transition style for full page slide backgrounds
+        backgroundTransition: 'default', // none/fade/slide/convex/concave/zoom
+
+
+        // Optional reveal.js plugins
+        dependencies: [
+        ]
+      });
+    </script>
+  <!-- dynamically load mathjax for compatibility with self-contained -->
+  <script>
+    (function () {
+      var script = document.createElement("script");
+      script.type = "text/javascript";
+      script.src  = "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+      document.getElementsByTagName("head")[0].appendChild(script);
+    })();
+  </script>
+
+<script>
+  (function() {
+    if (window.jQuery) {
+      Reveal.addEventListener( 'slidechanged', function(event) {  
+        window.jQuery(event.previousSlide).trigger('hidden');
+        window.jQuery(event.currentSlide).trigger('shown');
+      });
+    }
+  })();
+</script>
+
+
+  </body>
+</html>

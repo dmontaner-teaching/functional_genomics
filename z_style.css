@@ -1,0 +1,17 @@
+
+
+/* re-size all images */
+/* .reveal img, .reveal video, .reveal iframe { max-width:60%; max-height:60%; } */
+.reveal img, .reveal video, .reveal iframe { width:60%; height:60%; }
+
+
+/* Do not capitalize titles */
+.reveal h1,
+.reveal h2,
+.reveal h3,
+.reveal h4,
+.reveal h5,
+.reveal h6 {
+    text-transform: none;
+    /* text-transform: uppercase; */
+}
