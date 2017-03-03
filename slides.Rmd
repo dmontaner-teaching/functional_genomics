@@ -172,20 +172,67 @@ reduces the effect of outliers
 But any continuous value can be used... 
 
 
+
 Multi Dimensional Gene Set Analysis
 ==============================================================
 
+Genomic dimensions
 --------------------------------------------------------------
 
-$$ \log \frac{\pi}{1-\pi} = \kappa + \alpha\ x_1 + \beta\ x_2 $$
-    
+- Gene expression
+- Transcript expression
+- Splicing
+- microRNA activity
+- Promoters
+- Methylation
+- SNV (genetic variation)
+- Copy Number
+- Loss of heterozygosity (LOH)
 
+--------------------------------------------------------------
+
+![](images/GO_xl.png)
+
+
+Multidimensional Logistic Regression
+--------------------------------------------------------------
+
+\  
+
+$$ \log \frac{P(g_i \in GO)}{P (g_i \notin GO)} = \kappa + \alpha\ x_1 + \beta\ x_2 $$
+
+--------------------------------------------------------------
+
+![](images/figure1.png)
 
 
 Interaction 
 --------------------------------------------------------------
 
-$$ \log \frac{\pi}{1-\pi} = \kappa + \alpha\ x_1 + \beta\ x_2 + \gamma\ x_1  x_2 $$
+\  
+
+$$ \log \frac{P(g_i \in GO)}{P (g_i \notin GO)} = \kappa + \alpha\ x_1 + \beta\ x_2 + \gamma\ x_1  x_2 $$
+
+--------------------------------------------------------------
+
+![](images/figure2a.png)
+
+--------------------------------------------------------------
+
+![](images/figure2b.png)
+
+--------------------------------------------------------------
+
+![](images/GO_bimodal2.png)
+
+--------------------------------------------------------------
+
+![](images/GO_interaccion.png)
+
+
+
+
+
 
 
 microRNAs
@@ -260,7 +307,7 @@ Software
 - https://github.com/dmontaner/mirbaseID
 - https://github.com/genometra/agilent
 - https://cran.r-project.org/web/packages/TiddlyWikiR
-  [example](http://dmontaner-papers.github.io/gsa4mirna)
+  [wiki example](http://dmontaner-papers.github.io/gsa4mirna)
  
 http://babelomics.org
 

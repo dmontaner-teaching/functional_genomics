@@ -83,7 +83,7 @@
     <h3 class="date"><a href="http://www.dmontaner.com">www.dmontaner.com</a></h3>
 </section>
 
-<section><section id="from-genes-to-phenotypes" class="titleslide slide level1"><h1>From Genes to Phenotypes</h1></section><section class="slide level2">
+<section><section id="from-genes-to-phenotype" class="titleslide slide level1"><h1>From Genes to Phenotype</h1></section><section class="slide level2">
 
 <p><img src="images/dna2phenotype.png" alt="" /></p>
 </section><section class="slide level2">
@@ -107,7 +107,7 @@
 </section><section id="experimental-data-microarrays-ngs" class="slide level2">
 <h1>Experimental Data: Microarrays &amp; NGS</h1>
 <p><img src="images/array.png" alt="" /></p>
-<p>thousands or millions of genomc <em>variables</em></p>
+<p>thousands or millions of genomic <em>variables</em></p>
 </section><section class="slide level2">
 
 <p><img src="images/expression.png" alt="" /></p>
@@ -124,7 +124,7 @@
 
 <p><img src="images/dag.gif" alt="" /></p>
 </section></section>
-<section><section id="gene-set-analysys" class="titleslide slide level1"><h1>Gene Set Analysys</h1></section><section class="slide level2">
+<section><section id="gene-set-analysis" class="titleslide slide level1"><h1>Gene Set Analysis</h1></section><section class="slide level2">
 
 <p><img src="images/over_representation_methods.png" alt="" /></p>
 </section><section id="shift-in-the-observation-unit" class="slide level2">
@@ -137,7 +137,7 @@
 <ol type="1">
 <li>more interpretable for researchers</li>
 <li>greater power (sample size )</li>
-<li>smaller pvalue adjustment:<br />
+<li>smaller p-value adjustment:<br />
  20,000 genes -&gt; 2,000 GO terms</li>
 </ol>
 <p>Takes advantage of the mildly differentially expressed genes</p>
@@ -156,12 +156,12 @@
 </section><section id="genomic-dimensions" class="slide level2">
 <h1>Genomic dimensions</h1>
 <ul>
-<li>Gene expresion</li>
-<li>Transcript expresion</li>
-<li>Splizing</li>
+<li>Gene expression</li>
+<li>Transcript expression</li>
+<li>Splicing</li>
 <li>microRNA activity</li>
 <li>Promoters</li>
-<li>Methilation</li>
+<li>Methylation</li>
 <li>SNV (genetic variation)</li>
 <li>Copy Number</li>
 <li>Loss of heterozygosity (LOH)</li>
@@ -182,47 +182,68 @@ in the differential expression analysis</p>
 <p><span class="math display">\[ \log \frac{P(g_i \in GO)}{P (g_i \notin GO)} = \kappa + \alpha \ r_i \]</span></p>
 <p> </p>
 \begin{align}
-&amp;\alpha &gt; 0 \rightarrow \text{enrichement is } + \\
-&amp;\alpha &lt; 0 \rightarrow \text{enrichement is } - \\
-&amp;\alpha = 0 \rightarrow \text{no enrichement}
+&amp;\alpha &gt; 0 \rightarrow \text{enrichment is } + \\
+&amp;\alpha &lt; 0 \rightarrow \text{enrichment is } - \\
+&amp;\alpha = 0 \rightarrow \text{no enrichment}
 \end{align}
 </section><section id="ranking-index" class="slide level2">
 <h1>Ranking index</h1>
 <p>Our proposal:</p>
 <p><span class="math display">\[ r = - sign (statistic) \cdot log (pvalue) \]</span></p>
 <p>makes results more comparable across different studies<br />
-(good for meta analisis)</p>
-<p><em>quantile</em> transformation to a <span class="math inline">\(N(0,1)\)</span><br />
-reduces the efect of outlyers</p>
+(good for meta analysis)</p>
+<p><em>quantiles</em> transformation to a <span class="math inline">\(N(0,1)\)</span><br />
+reduces the effect of outliers</p>
 <p> </p>
-<p>But any continuos value can be used…</p>
+<p>But any continuous value can be used…</p>
 </section></section>
-<section><section id="multi-dimensional-gene-set-analysis" class="titleslide slide level1"><h1>Multi Dimensional Gene Set Analysis</h1></section><section class="slide level2">
+<section><section id="multi-dimensional-gene-set-analysis" class="titleslide slide level1"><h1>Multi Dimensional Gene Set Analysis</h1></section><section id="genomic-dimensions-1" class="slide level2">
+<h1>Genomic dimensions</h1>
+<ul>
+<li>Gene expression</li>
+<li>Transcript expression</li>
+<li>Splicing</li>
+<li>microRNA activity</li>
+<li>Promoters</li>
+<li>Methylation</li>
+<li>SNV (genetic variation)</li>
+<li>Copy Number</li>
+<li>Loss of heterozygosity (LOH)</li>
+</ul>
+</section><section class="slide level2">
 
-<p><span class="math display">\[ \log \frac{\pi}{1-\pi} = \kappa + \alpha\ x_1 + \beta\ x_2 \]</span></p>
-<p>La interpretación se realiza según el signo de los coeficientes <span class="math inline">\(\alpha\)</span>, <span class="math inline">\(\beta\)</span> y <span class="math inline">\(\gamma\)</span>.</p>
+<p><img src="images/GO_xl.png" alt="" /></p>
+</section><section id="multidimensional-logistic-regression" class="slide level2">
+<h1>Multidimensional Logistic Regression</h1>
+<p> </p>
+<p><span class="math display">\[ \log \frac{P(g_i \in GO)}{P (g_i \notin GO)} = \kappa + \alpha\ x_1 + \beta\ x_2 \]</span></p>
+</section><section class="slide level2">
+
+<p><img src="images/figure1.png" alt="" /></p>
 </section><section id="interaction" class="slide level2">
 <h1>Interaction</h1>
-<p><span class="math display">\[ \log \frac{\pi}{1-\pi} = \kappa + \alpha\ x_1 + \beta\ x_2 + \gamma\ x_1  x_2 \]</span></p>
+<p> </p>
+<p><span class="math display">\[ \log \frac{P(g_i \in GO)}{P (g_i \notin GO)} = \kappa + \alpha\ x_1 + \beta\ x_2 + \gamma\ x_1  x_2 \]</span></p>
+</section><section class="slide level2">
+
+<p><img src="images/figure2a.png" alt="" /></p>
+</section><section class="slide level2">
+
+<p><img src="images/figure2b.png" alt="" /></p>
+</section><section class="slide level2">
+
+<p><img src="images/GO_bimodal2.png" alt="" /></p>
+</section><section class="slide level2">
+
+<p><img src="images/GO_interaccion.png" alt="" /></p>
 </section></section>
 <section><section id="micrornas" class="titleslide slide level1"><h1>microRNAs</h1></section><section id="microrna-to-gene-transference" class="slide level2">
 <h1>microRNA to gene transference</h1>
 <p><span class="math display">\[ t_i = \sum_{j \in G_i} r_{j} \]</span></p>
 <p>METAGENOMICA</p>
-</section><section id="equations" class="slide level2">
-<h1>Equations</h1>
 </section><section class="slide level2">
 
 <p><img src="images/diagram.png" alt="" /></p>
-</section><section id="mas-eq" class="slide level2">
-<h1>Mas eq</h1>
-\begin{equation}
-\begin{split}
-F = \{F_{x} \in  F_{c} &amp;: (|S| &gt; |C|) \\
- &amp;\quad \cap (\text{minPixels}  &lt; |S| &lt; \text{maxPixels}) \\
- &amp;\quad \cap (|S_{\text{conected}}| &gt; |S| - \epsilon) \}
-\end{split}
-\end{equation}
 </section></section>
 <section><section id="and-so-summary" class="titleslide slide level1"><h1>And so… Summary</h1></section><section id="it-was-fun" class="slide level2">
 <h1>It was fun</h1>
@@ -256,7 +277,7 @@ F = \{F_{x} \in  F_{c} &amp;: (|S| &gt; |C|) \\
 <li><a href="http://bioconductor.org/packages/SNPediaR" class="uri">http://bioconductor.org/packages/SNPediaR</a></li>
 <li><a href="https://github.com/dmontaner/mirbaseID" class="uri">https://github.com/dmontaner/mirbaseID</a></li>
 <li><a href="https://github.com/genometra/agilent" class="uri">https://github.com/genometra/agilent</a></li>
-<li><a href="https://cran.r-project.org/web/packages/TiddlyWikiR" class="uri">https://cran.r-project.org/web/packages/TiddlyWikiR</a> - <a href="http://dmontaner-papers.github.io/gsa4mirna">ex</a></li>
+<li><a href="https://cran.r-project.org/web/packages/TiddlyWikiR" class="uri">https://cran.r-project.org/web/packages/TiddlyWikiR</a> <a href="http://dmontaner-papers.github.io/gsa4mirna">wiki example</a></li>
 </ul>
 <p><a href="http://babelomics.org" class="uri">http://babelomics.org</a></p>
 </section><section id="knowledge-transfer" class="slide level2">
