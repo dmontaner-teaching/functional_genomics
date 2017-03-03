@@ -212,6 +212,14 @@ reduces the effect of outliers</p>
 </ul>
 </section><section class="slide level2">
 
+<ul>
+<li>Study several diseases / datasets at the same time</li>
+<li>Gene conservation in evolution</li>
+<li>Text mining information: genes vs. treatments</li>
+<li>Some other phisical characteristics: gene length</li>
+</ul>
+</section><section class="slide level2">
+
 <p><img src="images/GO_xl.png" alt="" /></p>
 </section><section id="multidimensional-logistic-regression" class="slide level2">
 <h1>Multidimensional Logistic Regression</h1>
@@ -236,30 +244,73 @@ reduces the effect of outliers</p>
 </section><section class="slide level2">
 
 <p><img src="images/GO_interaccion.png" alt="" /></p>
-</section></section>
-<section><section id="micrornas" class="titleslide slide level1"><h1>microRNAs</h1></section><section class="slide level2">
+</section><section id="interpretation" class="slide level2">
+<h1>Interpretation</h1>
+<p> </p>
+<p><span class="math display">\[ \log \frac{P(g_i \in GO)}{P (g_i \notin GO)} = \kappa + \alpha\ x_1 + \beta\ x_2 + \gamma\ x_1  x_2 \]</span></p>
+</section><section class="slide level2">
 
-<p><img src="images/inter.png" alt="" /></p>
+<p><img src="images/interpret_1.png" alt="" /></p>
+</section><section class="slide level2">
+
+<p><img src="images/interpret_2.png" alt="" /></p>
+</section><section class="slide level2">
+
+<p><img src="images/interpret_3.png" alt="" /></p>
+</section></section>
+<section><section id="exensions" class="titleslide slide level1"><h1>Exensions</h1></section><section id="micrornas" class="slide level2">
+<h1>microRNAs</h1>
+<p><img src="images/mirna.png" alt="" /></p>
+</section><section id="target-genes" class="slide level2">
+<h1>Target genes</h1>
+<p><img src="images/mirna_targets.png" alt="" /></p>
+</section><section id="biological-function" class="slide level2">
+<h1>Biological function</h1>
+<pre><code>                              Funtion (GO)
+                               /      \
++ gene expression  -&gt; + proteine -&gt; + biological activity
+                    ^
+                    |
++ miRNA expression -&gt; - proteine -&gt; - biological activity
+                               \      / 
+                              Funtion (GO)</code></pre>
+<ul>
+<li>miRNA proteine inhibition through <em>target</em> genes</li>
+<li>Functinallity is <em>annotated</em> to genes: GO db</li>
+<li>miRNAs <em>target</em> certain genes: miRTarBase db</li>
+</ul>
+<p>All information converges at a gene level<br />
+where the functional interpretation can be done.</p>
+</section><section id="microrna-to-gene-transference" class="slide level2">
+<h1>microRNA to gene transference</h1>
+<p><span class="math display">\[ t_i = \sum_{j \in GT_i} r_{j} \]</span></p>
+<ul>
+<li><span class="math inline">\(r_{j}\)</span> ranking statistic for miRNA <span class="math inline">\(j\)</span></li>
+<li><span class="math inline">\(GT_i\)</span> set of miRNAs targeting gene <span class="math inline">\(i\)</span></li>
+<li><span class="math inline">\(t_{i}\)</span> ranking statistic for gene <span class="math inline">\(i\)</span>: <strong>inhibition score</strong></li>
+</ul>
+<p>Additive (or subtractive) score: simple but efficient model</p>
+</section><section id="plug-into-the-logistic-model" class="slide level2">
+<h1>Plug into the logistic model</h1>
+<p> </p>
+<p><span class="math display">\[ \log \frac{P(g_i \in GO)}{P (g_i \notin GO)} = \kappa + \alpha\ x_1 + \beta\ x_2 + \gamma\ x_1  x_2 \]</span></p>
+<p> </p>
+<p><span class="math display">\[ \log \frac{P(g_i \in GO)}{P (g_i \notin GO)} = \kappa + \alpha\  t  + \beta\ x_2 + \gamma\  t   x_2 \]</span></p>
+</section><section id="unidimensional-case" class="slide level2">
+<h1>Unidimensional case</h1>
+<p> </p>
+<p><span class="math display">\[ \log \frac{P(g_i \in GO)}{P (g_i \notin GO)} = \kappa + \alpha \ r_i \]</span></p>
+<p> </p>
+<p><span class="math display">\[ \log \frac{P(g_i \in GO)}{P (g_i \notin GO)} = \kappa + \alpha \ t_i \]</span></p>
 </section><section class="slide level2">
 
 <p><img src="images/diagram.png" alt="" /></p>
 </section><section class="slide level2">
 
 <p><img src="images/interp_gen.png" alt="" /></p>
-</section><section class="slide level2">
-
 <p><img src="images/interp_go.png" alt="" /></p>
-<p>mirna expression</p>
-</section><section id="microrna-to-gene-transference" class="slide level2">
-<h1>microRNA to gene transference</h1>
-<p><span class="math display">\[ t_i = \sum_{j \in G_i} r_{j} \]</span></p>
-</section><section class="slide level2">
-
 </section></section>
-<section><section id="related-topics" class="titleslide slide level1"><h1>Related topics</h1></section><section class="slide level2">
-
-<p><img src="images/diagram.png" alt="" /></p>
-</section></section>
+<section><section id="exensions-1" class="titleslide slide level1"><h1>Exensions</h1></section></section>
 <section><section id="and-so-summary" class="titleslide slide level1"><h1>And so… Summary</h1></section><section id="it-was-fun" class="slide level2">
 <h1>It was fun</h1>
 <p>… and useful</p>
