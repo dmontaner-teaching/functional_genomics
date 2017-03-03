@@ -129,20 +129,45 @@
 <p><img src="images/over_representation_methods.png" alt="" /></p>
 </section><section id="shift-in-the-observation-unit" class="slide level2">
 <h1>Shift in the observation unit</h1>
-<p><span class="math inline">\(H_0: gene_i\)</span> is not differentially expressed …</p>
-<p><span class="math inline">\(H_0: gene set_i\)</span> is not <strong>enriched</strong> …</p>
+<ul>
+<li><span class="math inline">\(H_0: gene_i\)</span> is not differentially expressed …</li>
+<li><span class="math inline">\(H_0: gene\ set_j\)</span> is not <strong>enriched</strong> …</li>
+</ul>
+<hr>
+<ol type="1">
+<li>more interpretable for researchers</li>
+<li>greater power (sample size )</li>
+<li>smaller pvalue adjustment:<br />
+ 20,000 genes -&gt; 2,000 GO terms</li>
+</ol>
+<p>Takes advantage of the mildly differentially expressed genes</p>
 </section><section id="gsea" class="slide level2">
 <h1>GSEA</h1>
 <p><img src="images/gsea.jpg" alt="" /></p>
-<p>Confidence level: <em>permutation</em> test</p>
+</section><section id="drawbacks" class="slide level2">
+<h1>Drawbacks</h1>
+<ul>
+<li>Confidence level based on a <strong>sample</strong> <em>permutation</em> test.<br />
+ Computationally intensive.</li>
+<li>Completely dependent of the gene level statistic.<br />
+ Not very flexible: weighting, covariates, …</li>
+<li>Tackles just a single <em>gneomic dimension</em></li>
+</ul>
+</section><section id="genomic-dimensions" class="slide level2">
+<h1>Genomic dimensions</h1>
+<ul>
+<li>Gene expresion</li>
+<li>Transcript expresion</li>
+<li>Splizing</li>
+<li>microRNA activity</li>
+<li>Promoters</li>
+<li>Methilation</li>
+<li>SNV (genetic variation)</li>
+<li>Copy Number</li>
+<li>Loss of heterozygosity (LOH)</li>
+</ul>
 </section><section id="remarks" class="slide level2">
 <h1>Remarks</h1>
-<ul>
-<li>Shift in the observatio unit</li>
-</ul>
-<p><span class="math inline">\(H_0: gene_i\)</span> is not differentially expressed</p>
-<p><span class="math inline">\(H_0: \text{gene set}_j\)</span> is not <strong>enriched</strong></p>
-<p>hola</p>
 </section></section>
 <section><section id="logistic-regression-model" class="titleslide slide level1"><h1>Logistic Regression model</h1></section><section id="ranking-index" class="slide level2">
 <h1>Ranking index</h1>

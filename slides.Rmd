@@ -82,31 +82,51 @@ Gene Set Analysys
 Shift in the observation unit
 --------------------------------------------------------------
 
-$H_0: gene_i$ is not differentially expressed ... 
+- $H_0: gene_i$ is not differentially expressed ...
+- $H_0: gene\ set_j$ is not __enriched__ ... 
 
-$H_0: gene set_i$ is not __enriched__ ... 
+<hr>
 
+1. more interpretable for researchers
+1. greater power (sample size )
+1. smaller pvalue adjustment:  
+   20,000 genes -> 2,000 GO terms
 
-
+Takes advantage of the mildly differentially expressed genes
 
 GSEA
 --------------------------------------------------------------
 
 ![](images/gsea.jpg)
 
-Confidence level: _permutation_ test 
+
+Drawbacks
+--------------------------------------------------------------
+
+- Confidence level based on a __sample__ _permutation_ test.  
+  Computationally intensive.
+- Completely dependent of the gene level statistic.  
+  Not very flexible: weighting, covariates, ...
+- Tackles just a single _genomic dimension_
+
+
+Genomic dimensions
+--------------------------------------------------------------
+
+- Gene expresion
+- Transcript expresion
+- Splizing
+- microRNA activity
+- Promoters
+- Methilation
+- SNV (genetic variation)
+- Copy Number
+- Loss of heterozygosity (LOH)
 
 
 Remarks
 --------------------------------------------------------------
 
-- Shift in the observatio unit
-
-$H_0: gene_i$ is not differentially expressed
-
-$H_0: \text{gene set}_j$ is not __enriched__
-
-hola
 
 
 Logistic Regression model
