@@ -231,12 +231,29 @@ $$ \log \frac{P(g_i \in GO)}{P (g_i \notin GO)} = \kappa + \alpha\ x_1 + \beta\ 
 
 
 
-
-
-
-
 microRNAs
 ==============================================================
+
+
+--------------------------------------------------------------
+
+![](images/inter.png)
+
+--------------------------------------------------------------
+
+![](images/diagram.png)
+
+--------------------------------------------------------------
+
+![](images/interp_gen.png)
+
+--------------------------------------------------------------
+
+![](images/interp_go.png)
+
+
+
+mirna expression 
 
 
 microRNA to gene transference
@@ -245,11 +262,24 @@ microRNA to gene transference
 $$ t_i = \sum_{j \in G_i} r_{j} $$
 
 
+--------------------------------------------------------------
 
 
 
-METAGENOMICA
 
+
+
+
+
+Related topics 
+==============================================================
+
+- Meta analysis
+- Weigthing schema
+- Gene set internal Correlation
+- Supervised Classiffication from enriched classes
+- Data preprocessing validation
+- Organization of results: thousands of tables, images, plots
 
 
 
