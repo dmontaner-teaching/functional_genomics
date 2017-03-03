@@ -353,15 +353,16 @@ Some more Extensions
 
 --------------------------------------------------------------
 
-- Weighing methods: gene importance
+- Weighting methods: gene importance
 - Gene to GeneSet empirical distance
 - Gene set internal Correlation
-- Meta analysis: combining different studies
-- Supervised Classification starting from enriched GeneSets
+- Meta analysis: combining results from several studies
+- Supervised   Classification using enriched GeneSets
 - Unsupervised Classification
 - Much more work in data preprocessing and validation
-- Incorporation of for technological biases such as gene length
-- Organization of results: thousands of tables, images, plots
+- Account for technological biases: gene length NGS
+- Organization and presentation of results:  
+  thousands of tables, images, plots
 
 
 
@@ -374,8 +375,8 @@ It was fun
 ... and useful
  
 - New methodology and tools are available 
-- My PhD
-- Supervised one more PhD and several MSc dissertations
+- I did my PhD
+- I supervised one more PhD and several MSc dissertations
 - Teaching and communication  
   [www.dmontaner.com/#Short Bioinformatics Courses](http://www.dmontaner.com/#Short%20Bioinformatics%20Courses)
 
@@ -403,7 +404,7 @@ Software
 - http://bioconductor.org/packages/SNPediaR
 - https://github.com/dmontaner/mirbaseID
 - https://github.com/genometra/agilent
-- https://cran.r-project.org/web/packages/TiddlyWikiR
+- https://cran.r-project.org/web/packages/TiddlyWikiR  
   [wiki example](http://dmontaner-papers.github.io/gsa4mirna)
  
 http://babelomics.org
@@ -420,20 +421,26 @@ First [CIPF](https://www.cipf.es/web/portada/spinoffs;jsessionid=C2DE665D4DFEE11
 
 
 
-What can I add to you
+& ? 2 u
 ==============================================================
 --------------------------------------------------------------
 
 - Statistics & Machine Learning
 - Theory + applied skills + statistical intuition
-- Used to solve _whole_ problems: beyond the analysis side
-- Team working
+- Wide computational skills
+- Problem solver: beyond data analysis
+- Problem finder: new questions
+- Team building
+- Training and teaching (colleagues and myself)
+- Reporting and communicating
+- Collaborating (open source)
+- Risk taking
 
-- Very similar context Risk prediction in clinic an fraud ...
 
-----
+Risk is Risk...
+--------------------------------------------------------------
 
-- Training and teaching 
-- Convincing and explaining 
-- Sharing
+in Finances or Biology
 
+Thank you!
+--------------------------------------------------------------
