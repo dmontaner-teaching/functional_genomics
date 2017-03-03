@@ -2,7 +2,7 @@
 % David Montaner
 % [www.dmontaner.com](http://www.dmontaner.com)
 
-From Genes to Phenotypes
+From Genes to Phenotype
 ==============================================================
 
 --------------------------------------------------------------
@@ -40,7 +40,7 @@ Experimental Data: Microarrays & NGS
 
 ![](images/array.png)
 
-thousands or millions of genomc _variables_
+thousands or millions of genomic _variables_
 
 --------------------------------------------------------------
 
@@ -71,7 +71,7 @@ Hypothesis testing
 
 
 
-Gene Set Analysys
+Gene Set Analysis
 ==============================================================
 
 --------------------------------------------------------------
@@ -89,7 +89,7 @@ Shift in the observation unit
 
 1. more interpretable for researchers
 1. greater power (sample size )
-1. smaller pvalue adjustment:  
+1. smaller p-value adjustment:  
    20,000 genes -> 2,000 GO terms
 
 Takes advantage of the mildly differentially expressed genes
@@ -113,50 +113,63 @@ Drawbacks
 Genomic dimensions
 --------------------------------------------------------------
 
-- Gene expresion
-- Transcript expresion
-- Splizing
+- Gene expression
+- Transcript expression
+- Splicing
 - microRNA activity
 - Promoters
-- Methilation
+- Methylation
 - SNV (genetic variation)
 - Copy Number
 - Loss of heterozygosity (LOH)
 
 
-Remarks
+Logistic Regression Model
+==============================================================
+
 --------------------------------------------------------------
 
+$$ \log \frac{P(g_i \in GO)}{P (g_i \notin GO)} = \kappa + \alpha \ r_i $$
 
+\  
 
-Logistic Regression model
-==============================================================
- 
+We model the probability of a gene belonging to a GO term  
+as a function of its _score_  
+in the differential expression analysis
+
+--------------------------------------------------------------
+
+![](images/over_representation_methods.png)
+
+--------------------------------------------------------------
+
+$$ \log \frac{P(g_i \in GO)}{P (g_i \notin GO)} = \kappa + \alpha \ r_i $$
+
+\  
+
+\begin{align}
+&\alpha > 0 \rightarrow \text{enrichment is } + \\
+&\alpha < 0 \rightarrow \text{enrichment is } - \\
+&\alpha = 0 \rightarrow \text{no enrichment}
+\end{align}
+
 
 Ranking index
 --------------------------------------------------------------
 
-For each gene:
+Our proposal: 
 
 $$ r = - sign (statistic) \cdot log (pvalue) $$
 
+makes results more comparable across different studies  
+(good for meta analysis)
 
-GSA
---------------------------------------------------------------
+_quantiles_ transformation to a $N(0,1)$  
+reduces the effect of outliers
 
+\  
 
-$$ \log \frac{P(g_i \in F)}{P (g_i \notin F)} = \kappa + \alpha \ r_i $$
-
-* $alpha > 0$ -> association with + index
-* $alpha < 0$ -> association with - index
-
-
-\begin{align*}
-&\alpha > 0 \rightarrow \text{asociation with } + \\
-&\alpha < 0 \rightarrow \text{asociación con índice } - \\
-&\alpha = 0 \rightarrow \text{no asociación}
-\end{align*}
-  
+But any continuous value can be used... 
 
 
 Multi Dimensional Gene Set Analysis
@@ -166,8 +179,6 @@ Multi Dimensional Gene Set Analysis
 
 $$ \log \frac{\pi}{1-\pi} = \kappa + \alpha\ x_1 + \beta\ x_2 $$
     
-La interpretación se realiza según el signo de los coeficientes 
-$\alpha$, $\beta$ y $\gamma$.
 
 
 
@@ -190,6 +201,7 @@ $$ t_i = \sum_{j \in G_i} r_{j} $$
 
 
 
+METAGENOMICA
 
 
 
@@ -197,26 +209,12 @@ $$ t_i = \sum_{j \in G_i} r_{j} $$
 
 
 
-Equations
---------------------------------------------------------------
 
 
 --------------------------------------------------------------
 
 ![](images/diagram.png)
 
-
-
-Mas eq
---------------------------------------------------------------
-
-\begin{equation}
-\begin{split}
-F = \{F_{x} \in  F_{c} &: (|S| > |C|) \\
- &\quad \cap (\text{minPixels}  < |S| < \text{maxPixels}) \\
- &\quad \cap (|S_{\text{conected}}| > |S| - \epsilon) \}
-\end{split}
-\end{equation}
 
 
 
@@ -261,7 +259,8 @@ Software
 - http://bioconductor.org/packages/SNPediaR
 - https://github.com/dmontaner/mirbaseID
 - https://github.com/genometra/agilent
-- https://cran.r-project.org/web/packages/TiddlyWikiR - [ex](http://dmontaner-papers.github.io/gsa4mirna)
+- https://cran.r-project.org/web/packages/TiddlyWikiR
+  [example](http://dmontaner-papers.github.io/gsa4mirna)
  
 http://babelomics.org
 

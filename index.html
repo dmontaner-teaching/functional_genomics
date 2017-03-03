@@ -151,7 +151,7 @@
  Computationally intensive.</li>
 <li>Completely dependent of the gene level statistic.<br />
  Not very flexible: weighting, covariates, …</li>
-<li>Tackles just a single <em>gneomic dimension</em></li>
+<li>Tackles just a single <em>genomic dimension</em></li>
 </ul>
 </section><section id="genomic-dimensions" class="slide level2">
 <h1>Genomic dimensions</h1>
@@ -166,25 +166,36 @@
 <li>Copy Number</li>
 <li>Loss of heterozygosity (LOH)</li>
 </ul>
-</section><section id="remarks" class="slide level2">
-<h1>Remarks</h1>
 </section></section>
-<section><section id="logistic-regression-model" class="titleslide slide level1"><h1>Logistic Regression model</h1></section><section id="ranking-index" class="slide level2">
+<section><section id="logistic-regression-model" class="titleslide slide level1"><h1>Logistic Regression Model</h1></section><section class="slide level2">
+
+<p><span class="math display">\[ \log \frac{P(g_i \in GO)}{P (g_i \notin GO)} = \kappa + \alpha \ r_i \]</span></p>
+<p> </p>
+<p>We model the probability of a gene belonging to a GO term<br />
+as a function of its <em>score</em><br />
+in the differential expression analysis</p>
+</section><section class="slide level2">
+
+<p><img src="images/over_representation_methods.png" alt="" /></p>
+</section><section class="slide level2">
+
+<p><span class="math display">\[ \log \frac{P(g_i \in GO)}{P (g_i \notin GO)} = \kappa + \alpha \ r_i \]</span></p>
+<p> </p>
+\begin{align}
+&amp;\alpha &gt; 0 \rightarrow \text{enrichement is } + \\
+&amp;\alpha &lt; 0 \rightarrow \text{enrichement is } - \\
+&amp;\alpha = 0 \rightarrow \text{no enrichement}
+\end{align}
+</section><section id="ranking-index" class="slide level2">
 <h1>Ranking index</h1>
-<p>For each gene:</p>
+<p>Our proposal:</p>
 <p><span class="math display">\[ r = - sign (statistic) \cdot log (pvalue) \]</span></p>
-</section><section id="gsa" class="slide level2">
-<h1>GSA</h1>
-<p><span class="math display">\[ \log \frac{P(g_i \in F)}{P (g_i \notin F)} = \kappa + \alpha \ r_i \]</span></p>
-<ul>
-<li><span class="math inline">\(alpha &gt; 0\)</span> -&gt; association with + index</li>
-<li><span class="math inline">\(alpha &lt; 0\)</span> -&gt; association with - index</li>
-</ul>
-\begin{align*}
-&amp;\alpha &gt; 0 \rightarrow \text{asociation with } + \\
-&amp;\alpha &lt; 0 \rightarrow \text{asociación con índice } - \\
-&amp;\alpha = 0 \rightarrow \text{no asociación}
-\end{align*}
+<p>makes results more comparable across different studies<br />
+(good for meta analisis)</p>
+<p><em>quantile</em> transformation to a <span class="math inline">\(N(0,1)\)</span><br />
+reduces the efect of outlyers</p>
+<p> </p>
+<p>But any continuos value can be used…</p>
 </section></section>
 <section><section id="multi-dimensional-gene-set-analysis" class="titleslide slide level1"><h1>Multi Dimensional Gene Set Analysis</h1></section><section class="slide level2">
 
@@ -197,6 +208,7 @@
 <section><section id="micrornas" class="titleslide slide level1"><h1>microRNAs</h1></section><section id="microrna-to-gene-transference" class="slide level2">
 <h1>microRNA to gene transference</h1>
 <p><span class="math display">\[ t_i = \sum_{j \in G_i} r_{j} \]</span></p>
+<p>METAGENOMICA</p>
 </section><section id="equations" class="slide level2">
 <h1>Equations</h1>
 </section><section class="slide level2">
