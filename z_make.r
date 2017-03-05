@@ -27,8 +27,8 @@ library (revealjs);  packageDescription ("revealjs",  fields = "Version") #"0.8"
 
 salida   <- "index"
 selfcont <- FALSE
-mathjax  <- "local"    ## The "local" option uses a local version of MathJax (which is copied into the output directory)
-#mathjax <- "default"  ## The "default" option uses an https URL from the official MathJax CDN.
+#mathjax  <- "local"    ## The "local" option uses a local version of MathJax (which is copied into the output directory)
+mathjax <- "default"  ## The "default" option uses an https URL from the official MathJax CDN.
 
 ################################################################################
 
