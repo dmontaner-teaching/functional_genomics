@@ -434,7 +434,7 @@ First [CIPF](https://www.cipf.es/web/portada/spinoffs;jsessionid=C2DE665D4DFEE11
 - Training and teaching (colleagues and myself)
 - Reporting and communicating
 - Collaborating (open source)
-- Risk taking
+- Risk taking...
 
 
 Risk is Risk...
